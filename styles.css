@@ -1,0 +1,85 @@
+body {
+  margin: 100px auto;
+  background-image: linear-gradient(to bottom, red, blue);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.contain {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.cards {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 25px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-areas:
+    "img head"
+    ". para"
+    "link arrow";
+  overflow: hidden;
+  background-color: white;
+  border-radius: 5px;
+  width: 300px;
+  border: 1px solid transparent;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.card:hover {
+  background-color: antiquewhite;
+}
+
+.card img {
+  grid-area: img;
+  height: 60px;
+  width: 60px;
+  margin: 10px 0px 0px 10px;
+}
+
+.card h2 {
+  grid-area: head;
+  font-size: 18px;
+  text-align: left;
+}
+
+.card p {
+  grid-area: para;
+  color: black;
+  text-align: left;
+  padding-right: 10px;
+}
+
+.card a {
+  grid-area: link;
+  text-decoration: none;
+  color: grey;
+  margin: 5px 5px 10px 10px;
+}
+
+.card i {
+  grid-area: arrow;
+  font-size: 20px;
+  color: grey;
+  margin: 5px 5px 5px 150px;
+}
+
+@media (max-width: 700px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
